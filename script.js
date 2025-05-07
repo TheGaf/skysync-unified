@@ -23,9 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       data.posts.slice(0, 5).forEach(post => {
-        const p = document.createElement("p");
-        p.innerHTML = `<a href="https://bsky.app/profile/${post.uri}" target="_blank">${post.text}</a><br><small>${new Date(post.createdAt).toLocaleString()}</small>`;
-        container.appendChild(p);
+        const postDiv = document.createElement("div");
+        postDiv.classList.add("post");
+
+        postDiv.innerHTML = `
+          <a href="https://bsky.app/profile/${post.uri}" target="_blank" style="color:#0ff; font-weight:bold;">
+            ${post.text}
+          </a><br>
+          <small style="color:#ccc;">
+            ${new Date(post.createdAt).toLocaleString()}
+          </small>
+        `;
+
+        container.appendChild(postDiv);
       });
     })
     .catch(err => {
