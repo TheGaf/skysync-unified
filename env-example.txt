@@ -1,0 +1,3 @@
+# Rename to .env in Vercel settings
+BLUESKY_HANDLE=gaf.nyc
+BLUESKY_APP_PASSWORD=guec-pw6g-lm27-mlmi
