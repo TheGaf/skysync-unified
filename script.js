@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   sections.forEach(section => observer.observe(section));
 
   // Fetch latest Bluesky posts
-  fetch("https://skysync-api-vercel.vercel.app/api/bluesky/feed")
+  fetch("/api/bluesky/feed")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById("bluesky-feed");
